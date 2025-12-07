@@ -39,12 +39,17 @@ body {
     margin-top: 40px;
 }
 
+#primaria {
+    margin-bottom: 30px;
+}
+
 #primaria > #milessegundo {
     font-size: 15px;
 }
 
-#primaria {
-    margin-bottom: 30px;
+#primaria > p {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 #primaria > span {
@@ -74,6 +79,14 @@ body {
         display: flex;
         flex-direction: column;
      }
+
+     #primaria > span {
+        text-align: center;
+     }
+
+     .espe {
+        display: none;
+     }
     
     /*BOTÕES*/
     #butons {
@@ -84,4 +97,10 @@ body {
     #butons > button {
         margin-bottom: 20px;
     }
+}
+
+@media screen and (min-width: 792px){
+        #primaria > p{
+            display: none;
+        }
 }
