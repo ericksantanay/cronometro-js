@@ -77,7 +77,7 @@ body {
 @media screen and (max-width: 792px){
 
     #text {
-        
+        max-width: 270px;
     }
 
      #primaria {
