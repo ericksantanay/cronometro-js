@@ -1,49 +1,76 @@
-// Saidas
-let h = document.getElementById('horas')
-let m = document.getElementById('minutos')
-let s = document.getElementById('segundos')
-let mile = document.getElementById('milessegundo')
+// Saídas
+let h = document.getElementById('horas');
+let m = document.getElementById('minutos');
+let s = document.getElementById('segundos');
+let mile = document.getElementById('milessegundo');
 
-// Indices
-indice = 0 // Inidice geral
-index = 1 // Esse é dos milessegundos
-min = 1 // Esse é dos minutos
-hor = 1 // Esse é das horas
+// Valores numéricos internos
+let ms = 0;
+let seg = 0;
+let min = 0;
+let hor = 0;
+
+let tempo;
 
 // Função Iniciar
 function iniciar() {
-    tempo = setInterval(function(){
-        indice++
-        
-        mile.innerText = String(mile.innerText = (indice)).padStart(2, '0')
 
-        if (indice == 10 ) {
-            indice = 0
-            s.innerText = String(s.innerText = (index++)).padStart(2, '0')
-            return
-        }else if (index == 59) {
-            index = 0
-            m.innerText = String(m.innerText = (min++)).padStart(2, '0') 
-            return
-        }else if (min == 59) {
-            min = 0
-            h.innerText = String(h.innerText = (hor++)).padStart(2, '0')
-            return
+    // Evita rodar 2 cronômetros ao mesmo tempo
+    if (tempo) return;
+
+    tempo = setInterval(function () {
+
+        ms++; // incrementa milissegundo (0–9 simulado)
+
+        // Atualiza milissegundos
+        mile.innerText = String(ms).padStart(2, '0');
+
+        // Quando chega em 10 → vira 1 segundo
+        if (ms === 10) {
+            ms = 0;
+            seg++;
+            s.innerText = String(seg).padStart(2, '0');
         }
 
-    }, 100)
+        // 60 segundos → 1 minuto
+        if (seg === 60) {
+            seg = 0;
+            min++;
+            m.innerText = String(min).padStart(2, '0');
+        }
+
+        // 60 minutos → 1 hora
+        if (min === 60) {
+            min = 0;
+            hor++;
+            h.innerText = String(hor).padStart(2, '0');
+        }
+
+    }, 100);
 }
 
-    // Função Pausar
-    function pausar() {
-        clearInterval(tempo)
-    }
 
-    // Função de Reset 
-    function resetar() {
-        mile.innerText = '00'
-        s.innerText = '00' 
-        m.innerText = '00' 
-        h.innerText = '00'
-        pausar()  
-    }
+// Função Pausar
+function pausar() {
+    clearInterval(tempo);
+    tempo = null; // libera pra iniciar de novo
+}
+
+
+// Função Resetar
+function resetar() {
+
+    // Valores internos
+    ms = 0;
+    seg = 0;
+    min = 0;
+    hor = 0;
+
+    // Interface
+    mile.innerText = "00";
+    s.innerText = "00";
+    m.innerText = "00";
+    h.innerText = "00";
+
+    pausar();
+}
