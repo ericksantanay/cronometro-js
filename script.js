@@ -41,9 +41,9 @@ function iniciar() {
 
     // Função de Reset 
     function resetar() {
-        indice = 0
-        index = 0 
-        min = 0 
-        hor = 0
-        parar()    
+        mile.innerText = '00'
+        s.innerText = '00' 
+        m.innerText = '00' 
+        h.innerText = '00'
+        pausar()  
     }
