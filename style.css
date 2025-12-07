@@ -75,18 +75,20 @@ body {
 
 /*MEDIA QUERY*/
 @media screen and (max-width: 792px){
+
+    #text {
+        
+    }
+
      #primaria {
-        display: flex;
-        flex-direction: column;
+       display: flex;
      }
 
      #primaria > span {
-        text-align: center;
+        font-size: 30px;
+        margin-left: 5px;
      }
 
-     .espe {
-        display: none;
-     }
     
     /*BOTÕES*/
     #butons {
@@ -99,8 +101,3 @@ body {
     }
 }
 
-@media screen and (min-width: 792px){
-        #primaria > p{
-            display: none;
-        }
-}
