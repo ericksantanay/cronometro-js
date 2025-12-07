@@ -15,7 +15,7 @@ function iniciar() {
 
         if (indice == 10 ) {
             indice = 0
-            s.innerText = index++
+            s.innerText = String(s.innerText = (index++)).padStart(2, '0')
             return
         }else if (index == 59) {
             index = 0
