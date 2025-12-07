@@ -35,6 +35,10 @@ body {
     margin-top: 40px;
 }
 
+#primaria > #milessegundo {
+    font-size: 15px;
+}
+
 #primaria {
     margin-bottom: 30px;
 }
