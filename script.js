@@ -29,10 +29,5 @@ function iniciar() {
             return
         }
 
-        
-
-        
-
-        
-    }, 50)
+    }, 90)
 }
