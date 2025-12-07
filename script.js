@@ -4,8 +4,10 @@ let m = document.getElementById('minutos')
 let s = document.getElementById('segundos')
 let mile = document.getElementById('milessegundo')
 
-indice = 0
-index = 1
+indice = 0 // Inidice geral
+index = 1 // Esse é dos milessegundos
+min = 1 // Esse é dos minutos
+hor = 1 // Esse é das horas
 // Função
 function iniciar() {
     setInterval(function(){
@@ -19,6 +21,11 @@ function iniciar() {
             return
         }else if (index == 59) {
             index = 0
+            m.innerText = String(m.innerText = (min++)).padStart(2, '0') 
+            return
+        }else if (min == 59) {
+            min = 0
+            h.innerText = String(h.innerText = (hor++)).padStart(2, '0')
             return
         }
 
