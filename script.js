@@ -4,13 +4,15 @@ let m = document.getElementById('minutos')
 let s = document.getElementById('segundos')
 let mile = document.getElementById('milessegundo')
 
+// Indices
 indice = 0 // Inidice geral
 index = 1 // Esse é dos milessegundos
 min = 1 // Esse é dos minutos
 hor = 1 // Esse é das horas
-// Função
+
+// Função Iniciar
 function iniciar() {
-    setInterval(function(){
+    tempo = setInterval(function(){
         indice++
         
         mile.innerText = String(mile.innerText = (indice)).padStart(2, '0')
@@ -29,5 +31,15 @@ function iniciar() {
             return
         }
 
-    }, 90)
+    }, 100)
 }
+
+    // Função Pausar
+    function pausar() {
+        clearInterval(tempo)
+    }
+
+    // Função de Reset 
+    function reset() {
+        
+    }
