@@ -36,7 +36,7 @@ O foco deste projeto foi treinar lógica de programação, controle de fluxo e b
 
 ## 🔗 Acesse o projeto
 
-👉 **Deploy:** https://ericksantanay.github.io/relogio-js/
+👉 **Deploy:** https://ericksantanay.github.io/cronometro-js/
 
 👉 **Repositório:** *(coloque o link do repo aqui)*
 
