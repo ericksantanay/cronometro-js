@@ -40,6 +40,10 @@ function iniciar() {
     }
 
     // Função de Reset 
-    function reset() {
-        
+    function resetar() {
+        indice = 0
+        index = 0 
+        min = 0 
+        hor = 0
+        parar()    
     }
